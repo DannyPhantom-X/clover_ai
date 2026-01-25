@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clover</title>
+    <link rel="stylesheet" href="public/css/loggedHome.css">
+    <link rel="stylesheet" href="public/css/unloggedHome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="public/images/logo.png" type="image/png">
+</head>
+    <body>
+        <input type="checkbox" class="aside-status" checked>
+        <header class="header">
+            <div>
+                <button class="img-bttn"><img src="public/images/logo.png"></button>
+                <span>Clover</span>
+            </div>
+            <div>
+                <button class="login-bttn">Login</button>
+                <button class="register-bttn">Register</button>
+            </div>
+        </header>
+        <div class="body-main">
+            <div class="fbi"></div>
+        </div>
+        <div class="chat-fixed-div">
+                <div class="body-main">
+                    <div class="chat-input">
+                        <div class="chat-input-above-div">
+                            <textarea class="input-area" id="" placeholder="Ask a question"></textarea>
+                            <button class="upload-bttn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="90%" height="100%" class="shrink-0 h-6 w-6 text-background">
+                                    <path class="path" fill="currentColor" d="M11 19V7.415l-3.293 3.293a1 1 0 1 1-1.414-1.414l5-5 .074-.067a1 1 0 0 1 1.34.067l5 5a1 1 0 1 1-1.414 1.414L13 7.415V19a1 1 0 1 1-2 0"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="chat-input-below-div">
+                            <div>
+                                <button class="add-bttn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="80%" height="100%" class="shrink-0 h-5 w-5">
+                                        <path fill="currentColor" d="M11.25 18v-5.25H6a.75.75 0 0 1 0-1.5h5.25V6a.75.75 0 0 1 1.5 0v5.25H18a.75.75 0 0 1 0 1.5h-5.25V18a.75.75 0 0 1-1.5 0"></path>
+                                    </svg>
+                                </button>    
+                            </div>
+                            <div class="below-section-two">
+                                <label>
+                                    <input class="chat-mode-radio" type="radio" name="mode" checked>
+                                    <span class="chat-mode-bttn">Chat</span>
+                                </label>
+                                <label>
+                                    <input class="build-mode-radio" type="radio" name="mode">
+                                    <span class="build-mode-bttn">Build</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <aside class="auth-aside">
+            <div class="auth-div">
+                <button class="close-bttn"> ✕ </button>
+                <div class="auth-first-div-line">
+                    <button class="img-bttn" id="img-bttn"><img src="public/images/logo.png"></button>
+                    <span>Clover</span>
+                </div>
+                <div class="auth-second-div-line">
+                    <button class="google-bttn">
+                        Continue with Google</button>
+                </div>
+                <div class="auth-third-div-line">
+                    <div class="line"></div>
+                    <div class="or">or</div>
+                    <div class="line"></div>
+                </div>
+                <div class="auth-fourth-div-line">
+                    <button class="email-bttn">Continue with Email</button>
+                </div>
+            </div>
+        </aside>
+
+        <script type="module" src="public/js/unloggedHome.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+body *{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #000b08;
+    display: flex;
+    flex-direction: row;
+    background-image: url(/public/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+}
+.overlay-aside{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body-container{
+    border-radius: 30px;
+    max-width: 450px;
+    width: 98%;
+    height: 470px;
+    background: #003824a6;
+    backdrop-filter: blur(13px) brightness(0.5) saturate(70%);
+    display: flex;
+    flex-direction: column;
+}
+.body-container > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+.in-clover-text, .out-clover-text{
+    margin-top: 40px;
+    margin-bottom: 60px;
+    color: #60b411;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.out-clover-text{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.input-place{
+    width: 70%;
+    height: 80%;
+    border: solid 2px #60b411;
+    border-radius: 50px;
+    padding-left: 15px;
+    background: #002a1b;
+    outline: none;
+    color: #e8f5ef;
+    font-size: 1rem;
+}
+.input-place::placeholder{
+    color: #9bbfb0;
+    font-size: 1rem;
+}
+.login-bttn, .signup-bttn{
+    width: calc(70% + 20px);
+    height: 90%;
+    border: none;
+    border-radius: 50px;
+    background: #60b411;
+    color: #e8f5ef;
+    font-size: 1.4rem;
+    /* margin-top: 50px; */
+    font-weight: bold;
+    cursor: pointer;
+}
+.login-bttn{
+    height: 85%;
+}
+.login-bttn:hover, .signup-bttn:hover{
+    background: #47860b;
+}
+.in-first-line{
+    margin-bottom: 50px;
+}
+.in-second-line{
+    margin-bottom: 30px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.out-first-line, .out-second-line, .out-third-line, .out-fourth-line{
+    margin-bottom: 15px;
+}
+.code-input{
+    width: 50%;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-right-width: 0.5px;
+}
+.send-code-bttn{
+    width: 20%;
+    height: 91%;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-left-width: 0.5px;
+    border: solid 2px #60b411;
+    background: #002a1b;
+    color: #e8f5ef;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.body-container > p{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+p{
+    margin-top: 5px;
+    color: #e8f5ef;
+}
+.body-container > p > span{
+    color: #60b411;
+    cursor: pointer;
+}
+.message{
+    color: red;
+    margin-top: 3px;
+    font-size: 1rem;
+    margin-bottom: 3px;
+    /* height: 0px; */
+}
+.loading{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    border: 10px solid transparent;
+    border-top: 10px solid #e8f5ef;
+    animation: rotate 1s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+input[type="text"], input[type="password"] {
+    -webkit-autofill {
+        background-color: transparent !important;
+    }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* -webkit-box-shadow: 0 0 0 1000px #002a1b inset; */
+    box-shadow: 0 0 0 1000px #002a1b inset;
+    -webkit-text-fill-color: #e8f5ef;
+    caret-color: #e8f5ef;
+}
+input:-moz-autofill {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+button {
+    outline: none;
+    box-shadow: none;
+}
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+button:active{
+    transform: scale(0.95);
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
