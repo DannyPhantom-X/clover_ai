@@ -57,7 +57,6 @@ const transport = nodemailer.createTransport({
 
 app.get('/', async (req, res) => {
     const token = req.cookies.token
-    console.log('ask')
     if(token){
         const payload = await jwt.verify(token, process.env.SECRET)
         if(payload) {
@@ -371,7 +370,11 @@ app.post('/login', async (req, res) => {
     }
 })
 async function connect() {
-    await cloverConnect;
+    try{
+        await cloverConnect;
+    }catch{
+        console.log('Unable to connect at this time');
+    }
     app.listen(7020, '0.0.0.0', () => {
         console.log('listening on port 7020')
     })

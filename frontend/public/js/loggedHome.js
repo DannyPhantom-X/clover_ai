@@ -146,10 +146,17 @@ window.addEventListener('DOMContentLoaded', async () => {
         })
         clickChatBttn()
     }
+    loadContent()
+})
+    
+async function loadContent() {
+    const pathname = window.location.pathname
+    let userInfoResponse;
     if (pathname !== '/') {
         try {
             const response = await fetch(`/api${pathname}`);
             const result = await response.json();   
+            document.querySelector('.fbi').innerHTML = '';
             result.conversation.forEach((conver, i) => {
                 conversation.push(conver)
                 document.querySelector('.fbi').innerHTML += `<div class="user-question">${conver.userQuestion}</div>`;
@@ -168,12 +175,14 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
         inputChecker()                                                                                              
     }
-})
+}
 
-function clickChatBttn() {
+async function clickChatBttn() {
     document.querySelectorAll('.chat-name').forEach((cn) => {
         cn.addEventListener('click', () => {
-            window.location.href =  `/c/${cn.dataset.chatId}`
+            // window.location.href =  `/c/${cn.dataset.chatId}`
+            history.pushState({}, '', `/c/${cn.dataset.chatId}`)
+            loadContent();
         })
     })
 }
